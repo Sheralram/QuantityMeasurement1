@@ -96,7 +96,7 @@ public class QuantityTest {
     public void givenInchWithSameReference_WhenCompared_ShouldReturnTrue() {
         Inch inch1 = new Inch(0.0);
         boolean samerefernece = inch1 == inch1;
-        Assertions.assertFalse(samerefernece);
+        Assertions.assertTrue(samerefernece);
     }
 
     @Test
@@ -104,7 +104,7 @@ public class QuantityTest {
         Inch inch = new Inch(0.0);
         Inch inch1 = new Inch(0.0);
         boolean differentReference = inch == inch1;
-        Assertions.assertTrue(differentReference);
+        Assertions.assertFalse(differentReference);
     }
 
 }
