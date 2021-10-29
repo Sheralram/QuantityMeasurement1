@@ -59,7 +59,7 @@ public class QuantityTest {
         Feet feet1 = new Feet(0.0);
         Feet feet2 = new Feet(0.0);
         boolean equality = feet1.equals(feet2);
-        Assertions.assertFalse(equality);
+        Assertions.assertTrue(equality);
     }
 
     @Test
@@ -67,7 +67,7 @@ public class QuantityTest {
         Feet feet1 = new Feet(0.0);
         Feet feet2 = new Feet(1.0);
         boolean notequality = feet1.equals(feet2);
-        Assertions.assertTrue(notequality);
+        Assertions.assertFalse(notequality);
     }
 
 }
