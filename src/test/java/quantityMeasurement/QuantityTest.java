@@ -165,5 +165,11 @@ public class QuantityTest {
         Yard yard1 = new Yard(1.0);
         Assertions.assertNotSame(inch1, yard1);
     }
+    @Test
+    public void given1YardAnd36Inch_ShouldReturnEqual() {
+        QuantityMeasurementMain quantityMeasurementMain = new QuantityMeasurementMain();
+        boolean result = quantityMeasurementMain.yardToInchConversion(1.0,36.0);
+        Assertions.assertTrue(result);
 
+    }
 }

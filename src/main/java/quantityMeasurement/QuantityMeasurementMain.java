@@ -16,4 +16,8 @@ public class QuantityMeasurementMain {
         }
         return false;
     }
+
+    public boolean yardToInchConversion(double yard, double inch) {
+        return false;
+    }
 }
