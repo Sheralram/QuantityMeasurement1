@@ -26,4 +26,21 @@ public class QuantityTest {
         Assertions.assertNotEquals(feet1, feet2);
     }
 
+    @Test                                                                 //REFERENCE CHECK
+    public void givenFeetWithSameReference_WhenCompared_ShouldReturnTrue() {
+        Feet feet = new Feet(0.0);
+        boolean sameReference = feet == feet;
+        Assertions.assertFalse(sameReference);
+    }
+
+    @Test
+    public void givenFeetWithDiffrentReference_WhenCompared_ShouldReturnFalse() {
+        Feet feet = new Feet(0.0);
+        Feet feet1 = new Feet(0.0);
+        boolean differentReference = feet == feet1;
+        Assertions.assertTrue(differentReference);
+    }
+
+
+
 }
