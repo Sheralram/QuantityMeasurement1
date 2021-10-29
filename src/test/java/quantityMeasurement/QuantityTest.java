@@ -40,6 +40,7 @@ public class QuantityTest {
         boolean differentReference = feet == feet1;
         Assertions.assertFalse(differentReference);
     }
+
     @Test                                                                                   //Type Check //
     public void givenFeetWithSameType_ShouldReturnTrue() {
         Feet feet1 = new Feet(0.0);
@@ -70,4 +71,10 @@ public class QuantityTest {
         Assertions.assertFalse(notequality);
     }
 
+    @Test
+    public void given0InchAnd0Inch_ShouldReturnEqual() {
+       Inch inch1 = new Inch(0.0);
+       Inch inch2 = new Inch(0.0);
+       Assertions.assertEquals(inch1, inch2);
+    }
 }
