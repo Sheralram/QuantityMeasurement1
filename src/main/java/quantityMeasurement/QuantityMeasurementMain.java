@@ -9,4 +9,8 @@ public class QuantityMeasurementMain {
         }
         return false;
     }
+
+    public boolean yardConversion(double feet, double yard) {
+        return false;
+    }
 }

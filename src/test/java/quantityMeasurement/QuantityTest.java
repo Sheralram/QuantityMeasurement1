@@ -145,6 +145,12 @@ public class QuantityTest {
         Assertions.assertTrue(result);
     }
 
+    @Test                                                                                //UC2 3ft = 1Yard//
+    void given3FeetAnd1Yard_ShouldReturnEqual() {
+        QuantityMeasurementMain quantityMeasurementMain = new QuantityMeasurementMain();
+        boolean result = quantityMeasurementMain.yardConversion(3.0, 1.0);
+        Assertions.assertTrue(result);
+    }
 
 
 }
