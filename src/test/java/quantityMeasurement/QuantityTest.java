@@ -146,14 +146,14 @@ public class QuantityTest {
     }
 
     @Test                                                                                //UC2 3ft = 1Yard//
-   public void given3FeetAnd1Yard_ShouldReturnEqual() {
+    public void given3FeetAnd1Yard_ShouldReturnEqual() {
         QuantityMeasurementMain quantityMeasurementMain = new QuantityMeasurementMain();
         boolean result = quantityMeasurementMain.yardConversion(3.0, 1.0);
         Assertions.assertTrue(result);
     }
 
     @Test
-    void given1FeetAnd1Yard_ShouldReturnNotEqual() {
+    public void given1FeetAnd1Yard_ShouldReturnNotEqual() {
         Feet feet1 = new Feet(1.0);
         Yard yard1 = new Yard(1.0);
         Assertions.assertEquals(feet1, yard1);
