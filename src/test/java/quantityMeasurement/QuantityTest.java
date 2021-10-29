@@ -111,14 +111,14 @@ public class QuantityTest {
     public void givenInchWithSameType_ShouldReturnTrue() {
         Inch inch1 = new Inch(0.0);
         Inch inch2 = new Inch(0.0);
-        Assertions.assertNotEquals(inch1, inch2);
+        Assertions.assertEquals(inch1, inch2);
     }
 
     @Test
     public void givenInchWithDifferentType_ShouldReturnFalse() {
         Inch inch1 = new Inch(0.0);
         Inch inch2 = new Inch(1.0);
-        Assertions.assertSame(inch1, inch2);
+        Assertions.assertNotSame(inch1, inch2);
     }
 
 }
