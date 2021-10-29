@@ -121,4 +121,20 @@ public class QuantityTest {
         Assertions.assertNotSame(inch1, inch2);
     }
 
+    @Test
+    public void givenInchWithEqualityCheck_ShouldReturnEqual() {
+        Inch inch1 = new Inch(0.0);
+        Inch inch2 = new Inch(0.0);
+        boolean equality = inch1.equals(inch2);
+        Assertions.assertFalse(equality);
+    }
+
+    @Test
+    public void givenInch_ShouldReturnFalse() {
+        Inch inch1 = new Inch(0.0);
+        Inch inch2 = new Inch(1.0);
+        boolean notequality = inch1.equals(inch2);
+        Assertions.assertTrue(notequality);
+    }
+
 }
