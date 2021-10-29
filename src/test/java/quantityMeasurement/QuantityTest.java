@@ -158,4 +158,12 @@ public class QuantityTest {
         Yard yard1 = new Yard(1.0);
         Assertions.assertNotEquals(feet1, yard1);
     }
+
+    @Test
+    public void given1InchAnd1Yard_ShouldReturnNotEqual() {
+        Inch inch1 = new Inch(1.0);
+        Yard yard1 = new Yard(1.0);
+        Assertions.assertSame(inch1, yard1);
+    }
+
 }
