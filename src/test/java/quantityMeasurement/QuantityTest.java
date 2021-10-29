@@ -73,15 +73,23 @@ public class QuantityTest {
 
     @Test
     public void given0InchAnd0Inch_ShouldReturnEqual() {
-       Inch inch1 = new Inch(0.0);
-       Inch inch2 = new Inch(0.0);
-       Assertions.assertEquals(inch1, inch2);
+        Inch inch1 = new Inch(0.0);
+        Inch inch2 = new Inch(0.0);
+        Assertions.assertEquals(inch1, inch2);
     }
+
     @Test
     public void given0InchAnd1Inch_ShouldReturnNotEqual() {
         Inch inch1 = new Inch(0.0);
         Inch inch2 = new Inch(1.0);
         Assertions.assertNotEquals(inch1, inch2);
+    }
+
+    @Test                                                                           //Null Check - Inch
+    public void givenNullInch_WhenCompare_ShouldReturnFalse() {
+        Inch inch = new Inch(0.0);
+        Inch inch1 = null;
+        Assertions.assertEquals(inch, inch1);
     }
 
 
