@@ -156,6 +156,6 @@ public class QuantityTest {
     public void given1FeetAnd1Yard_ShouldReturnNotEqual() {
         Feet feet1 = new Feet(1.0);
         Yard yard1 = new Yard(1.0);
-        Assertions.assertEquals(feet1, yard1);
+        Assertions.assertNotEquals(feet1, yard1);
     }
 }
