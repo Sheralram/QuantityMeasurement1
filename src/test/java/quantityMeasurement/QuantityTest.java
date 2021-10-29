@@ -89,7 +89,7 @@ public class QuantityTest {
     public void givenNullInch_WhenCompare_ShouldReturnFalse() {
         Inch inch = new Inch(0.0);
         Inch inch1 = null;
-        Assertions.assertEquals(inch, inch1);
+        Assertions.assertNotEquals(inch, inch1);
     }
 
 
