@@ -44,14 +44,14 @@ public class QuantityTest {
     public void givenFeetWithSameType_ShouldReturnTrue() {
         Feet feet1 = new Feet(0.0);
         Feet feet2 = new Feet(0.0);
-        Assertions.assertNotEquals(feet1, feet2);
+        Assertions.assertEquals(feet1, feet2);
     }
 
     @Test
     public void givenFeetWithDifferentType_ShouldReturnFalse() {
         Feet feet1 = new Feet(0.0);
         Feet feet2 = new Feet(0.0);
-        Assertions.assertSame(feet1, feet2);
+        Assertions.assertNotSame(feet1, feet2);
     }
 
 
