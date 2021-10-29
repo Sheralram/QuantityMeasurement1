@@ -30,7 +30,7 @@ public class QuantityTest {
     public void givenFeetWithSameReference_WhenCompared_ShouldReturnTrue() {
         Feet feet = new Feet(0.0);
         boolean sameReference = feet == feet;
-        Assertions.assertFalse(sameReference);
+        Assertions.assertTrue(sameReference);
     }
 
     @Test
@@ -38,7 +38,7 @@ public class QuantityTest {
         Feet feet = new Feet(0.0);
         Feet feet1 = new Feet(0.0);
         boolean differentReference = feet == feet1;
-        Assertions.assertTrue(differentReference);
+        Assertions.assertFalse(differentReference);
     }
 
 
