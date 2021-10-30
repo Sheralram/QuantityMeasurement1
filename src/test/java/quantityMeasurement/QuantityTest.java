@@ -181,4 +181,11 @@ public class QuantityTest {
         double actual = inch1.getInchToYard();
         Assertions.assertEquals(actual, 1.0);
     }
+
+    @Test
+    public void given2InchAnd5Centimeter_ShouldReturnEqual() {
+        Inch inch = new Inch(2.0);
+        double actual = inch.getInchToCentimeter();
+        Assertions.assertNotEquals(actual, 5.0);
+    }
 }

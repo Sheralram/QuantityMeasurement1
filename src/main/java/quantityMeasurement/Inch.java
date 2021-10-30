@@ -2,6 +2,7 @@ package quantityMeasurement;
 
 public class Inch {
     private static final double YARD = 36.0 ;
+    private static final double CENTIMETER = 2.5;
     private final double value;
 
     public Inch(double value) {
@@ -21,4 +22,8 @@ public class Inch {
         return Double.compare(inch.value, value) == 0;
     }
 
+    public double getInchToCentimeter() {
+        double conversion = value * CENTIMETER;
+        return conversion;
+    }
 }
