@@ -3,6 +3,7 @@ package quantityMeasurement;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 
+
 public class QuantityTest {
 
     @Test
@@ -140,16 +141,17 @@ public class QuantityTest {
 
     @Test                                                                               //UC1 1ft = 12Inch //
     public void given1FeetAnd12Inch_ShouldReturnTrue() {
-        QuantityMeasurementMain quantityMeasurementMain = new QuantityMeasurementMain();
-        boolean result = quantityMeasurementMain.inchConversion(1.0, 12);
-        Assertions.assertTrue(result);
+        Feet feet = new Feet(1.0);
+        double actual = feet.getFeetToInch();
+        Assertions.assertEquals(actual, 12);
     }
 
     @Test                                                                                //UC2 3ft = 1Yard//
     public void given3FeetAnd1Yard_ShouldReturnEqual() {
-        QuantityMeasurementMain quantityMeasurementMain = new QuantityMeasurementMain();
-        boolean result = quantityMeasurementMain.yardConversion(3.0, 1.0);
-        Assertions.assertTrue(result);
+        Feet feet = new Feet(3.0);
+        double actual = feet.getFeetToYard();
+        Assertions.assertEquals(actual, 1.0);
+
     }
 
     @Test
@@ -165,11 +167,18 @@ public class QuantityTest {
         Yard yard1 = new Yard(1.0);
         Assertions.assertNotSame(inch1, yard1);
     }
+
     @Test
     public void given1YardAnd36Inch_ShouldReturnEqual() {
-        QuantityMeasurementMain quantityMeasurementMain = new QuantityMeasurementMain();
-        boolean result = quantityMeasurementMain.yardToInchConversion(1.0,36.0);
-        Assertions.assertTrue(result);
+        Yard yard = new Yard(1.0);
+        double actual = yard.getYardToInch();
+        Assertions.assertEquals(actual, 36.0);
+    }
 
+    @Test
+    public void given36InchAnd1Yard_ShouldReturnEqual() {
+        Inch inch1 = new Inch(36.0);
+        double actual = inch1.getInchToYard();
+        Assertions.assertEquals(actual, 1.0);
     }
 }

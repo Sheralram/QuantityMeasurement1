@@ -1,10 +1,16 @@
 package quantityMeasurement;
 
 public class Inch {
+    private static final double YARD = 36.0 ;
     private final double value;
 
     public Inch(double value) {
         this.value = value;
+    }
+
+    public double getInchToYard() {
+        double conversion = value / YARD ;
+        return conversion;
     }
 
     @Override
