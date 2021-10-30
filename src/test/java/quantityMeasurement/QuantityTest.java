@@ -186,6 +186,6 @@ public class QuantityTest {
     public void given2InchAnd5Centimeter_ShouldReturnEqual() {
         Inch inch = new Inch(2.0);
         double actual = inch.getInchToCentimeter();
-        Assertions.assertNotEquals(actual, 5.0);
+        Assertions.assertEquals(actual, 5.0);
     }
 }
