@@ -5,7 +5,9 @@ public enum Unit {
     //Enums for conversions according to volumes
     LITRES(1.0), GALLON_TO_LITRE(3.78), MILLILITRE_TO_LITRE(0.001),
     //Enums for conversions according to weights
-    KILOGRAM(1.0), GRAMS_TO_KILOGRAM(1.0 / 1000), TONNE_TO_KILOGRAM(1.0 * 1000),;
+    KILOGRAM(1.0), GRAMS_TO_KILOGRAM(1.0 / 1000), TONNE_TO_KILOGRAM(1.0 * 1000),
+    //Enums for conversions according to temperature
+    CELSIUS(1.0 * 2.12), FAHRENHEIT_TO_CELSIUS(1.0);
 
     public final double baseUnitConversion;
 
