@@ -11,6 +11,8 @@ public class Length {
     private static final double INCH_TO_CENTIMETERS = 2.50;
     private static final double GALLON_TO_LITRES = 3.78;
     private static final double LITRES_TO_MILLILITRE = 1000;
+    private static final double KILOGRAM_TO_GRAM = 1000;
+    private static final double TONNE_TO_KILOGRAM = 1000;
 
     private final Unit unit;
     private final double value;

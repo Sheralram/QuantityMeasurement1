@@ -250,7 +250,7 @@ public class QuantityMeasurementTest {
     }
 
     @Test
-    void given1GallonAnd3And78Litres_WhenAdd_ShouldReturn7And57Litres() {
+        public void given1GallonAnd3And78Litres_WhenAdd_ShouldReturn7And57Litres() {
         Length gallon = new Length(Unit.GALLON_TO_LITRE, 1.0);
         Length litres = new Length(Unit.LITRES, 3.78);
         double add = Length.addLengthsToInches(gallon, litres);
@@ -258,11 +258,35 @@ public class QuantityMeasurementTest {
     }
 
     @Test
-    void given1LitreAnd1000MilliLitres_WhenAdd_ShouldReturn2Litres() {
+        public void given1LitreAnd1000MilliLitres_WhenAdd_ShouldReturn2Litres() {
         Length litre = new Length(Unit.LITRES, 1);
         Length millilitre = new Length(Unit.MILLILITRE_TO_LITRE, 1000.0);
         double add = Length.addLengthsToInches(litre, millilitre);
         Assertions.assertEquals(add, 2);
+    }
+
+    @Test
+        public void given1KgAnd100Grams_ShouldReturnTrue() {
+        Length kilogram = new Length(Unit.KILOGRAM, 1);
+        Length gram = new Length(Unit.GRAMS_TO_KILOGRAM, 1000.0);
+        boolean compareCheck = Length.compare(kilogram, gram);
+        Assertions.assertTrue(compareCheck);
+    }
+
+    @Test
+        public void given1TonneAnd1000Kg_ShouldReturnTrue() {
+        Length tonne = new Length(Unit.TONNE_TO_KILOGRAM, 1.0);
+        Length kilogram = new Length(Unit.KILOGRAM, 1000.0);
+        boolean compareCheck = Length.compare(tonne, kilogram);
+        Assertions.assertTrue(compareCheck);
+    }
+
+    @Test
+        public void given1TonneAnd1000Gram_WhenAdded_ShouldReturn1001Kg() {
+        Length tonne = new Length(Unit.TONNE_TO_KILOGRAM, 1.0);
+        Length gram = new Length(Unit.GRAMS_TO_KILOGRAM, 1000.0);
+        double add = Length.addLengthsToInches(tonne, gram);
+        Assertions.assertEquals(add,1001);
     }
 
 }
