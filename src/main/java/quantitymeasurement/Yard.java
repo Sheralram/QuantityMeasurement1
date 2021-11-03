@@ -1,4 +1,4 @@
-package quantityMeasurement;
+package quantitymeasurement;
 /**
  * @author : Ramkrishna Sheral
  * @version : 1.0
